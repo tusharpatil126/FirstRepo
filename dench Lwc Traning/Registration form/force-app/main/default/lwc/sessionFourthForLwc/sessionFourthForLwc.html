@@ -1,0 +1,48 @@
+<template>
+<lightning-card>
+    <lightning-input type="text" data-fromfield="accountName" label="Enter Account Name" placeholder="Enter Account Name" required="true" value={accountObject.Name}></lightning-input><br />
+    <lightning-input type="text" data-fromfield="accountType" label="Enter Type" placeholder="Enter Account Name" value={accountObject.Type} ></lightning-input><br />
+    <lightning-input type="text" data-fromfield="accountRating" label="Enter Rating" placeholder="Enter Account Name" value={accountObject.Rating} ></lightning-input><br />
+    <lightning-input type="text" data-fromfield="accountSLA" label="Enter SLA" placeholder="Enter Account Name" value={accountObject.SLA__c} ></lightning-input><br />
+
+
+    <lightning-button icon-name="utility:record_create" variant="neutral" label="Create" onclick={createAccountHandler}></lightning-button>&nbsp;
+    <lightning-button icon-name="utility:search" variant="brand" label="Search" onclick={searchAccountHandler}></lightning-button>&nbsp;
+    <lightning-button icon-name="utility:record_update" variant="success" label="Update" onclick={updateAccountHandler}></lightning-button>&nbsp;
+    <lightning-button icon-name="utility:delete" variant="destructive" label="Delete" onclick={deleteAccountHandler}></lightning-button> <br /> <br />
+
+    <template if:true={showSpinerFlag}>
+        <div class="exampleHolder">
+            <lightning-spinner alternative-text="Loading" size="medium"></lightning-spinner>
+        </div>
+    </template>
+    Information user<br />
+    Account Details :  <br />
+    Account Name : {accountObject.Name} <br />
+    Account Type : {accountObject.Type} <br />
+    Account Rating : {accountObject.Rating} <br />
+    Account SLA : {accountObject.SLA__c} 
+    <br /> <br />
+
+    <table>
+    <!--Header of the table-->
+    <thead>
+       <tr class="slds-line-height_reset">
+        <th class="slds-size_1-of-6" scope="col">Account Name</th>
+        <th class="slds-size_1-of-6" scope="col">Type</th>
+        <th class="slds-size_1-of-6" scope="col">Rating</th>
+        <th class="slds-size_1-of-6" scope="col">SLA</th>
+       </tr>
+    </thead>
+    <!--Body of the table-->
+    <tbody>
+        <tr>
+            <td>{accountObject.Name}</td>
+            <td>{accountObject.Type}</td>
+            <td>{accountObject.Rating}</td>
+            <td>{accountObject.SLA__c}</td>
+        </tr>
+    </tbody>
+</table>
+</lightning-card>
+</template>

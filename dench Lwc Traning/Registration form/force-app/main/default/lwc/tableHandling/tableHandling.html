@@ -1,0 +1,26 @@
+<template>
+    <lightning-card>
+
+        <lightning-button variant="destructive" icon-name="utility:delete" label="Delete Selected Records" onclick={deleteSelectedRecordHandler}></lightning-button>
+    <lightning-combobox
+            name="accType"
+            label="Select Account Type"
+            value={accType}
+            placeholder="Select Account Type"
+            options={accTypes}
+            onchange={handleAccountTypeChange} ></lightning-combobox> <br />
+
+    <lightning-datatable
+    key-field="id"
+    data={accList}
+    columns={columns}
+    draft-values={draftValues}
+    onrowselection={selectedRecordHandler}
+    onsave={saveHandler}>
+</lightning-datatable>
+
+
+
+
+</lightning-card>
+</template>

@@ -1,0 +1,22 @@
+<template>
+    <lightning-card  title="This is RegistrationForm">
+        
+        <lightning-input type="text" label="Enter FirstName" name="firstName"></lightning-input> <br />
+        <lightning-input type="text" label="Enter LastName" name="lastName"></lightning-input> <br />
+        <lightning-input type="text" label="Enter Email" name="email"></lightning-input> <br />
+        <lightning-input type="Number" label="Enter Phone" name="phone"></lightning-input> <br />
+        <lightning-input type="Date" label="Enter DOB" name="dob"></lightning-input> <br /> <br />
+
+        <lightning-button variant="brand" label="Submit" title="Submit" onclick={showName} class="slds-m-left_x-small"></lightning-button> <br />
+
+        First Name = {firstName} <br />
+        Last Name = {lastName} <br />
+        Email = {email} <br />
+        Phone = {phone} <br />
+        DOB = {dob}
+
+       
+
+        
+    </lightning-card> 
+</template>

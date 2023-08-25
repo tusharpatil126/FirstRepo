@@ -1,0 +1,16 @@
+<template>
+
+    <lightning-card>
+        <lightning-button variant="brand" label="Create" onclick={createRecordHandler}></lightning-button>&nbsp;
+        <lightning-button variant="brand" label="Search" onclick={SearchRecordHandler}></lightning-button>&nbsp;
+        <lightning-button variant="brand" label="Update" onclick={updateRecordHandler}></lightning-button>&nbsp;
+        <lightning-button variant="brand" label="Delete" onclick={deleteRecordHandler}></lightning-button>&nbsp;
+
+        <lightning-input type="text" data-formfield="contactFirstName" placeholder="Enter  First Name" name="contactFirstName" value={createContactRecords.FirstName}></lightning-input><BR /> 
+        <lightning-input type="text" data-formfield="contactLastName"  placeholder="Enter Last Name"  name="contactLastName"  value={createContactRecords.LastName}></lightning-input><BR />
+        <lightning-input type="text" data-formfield="contactPhone"     placeholder="Enter Phone"      name="contactPhone"     value={createContactRecords.Phone}></lightning-input><BR />
+        <lightning-input type="text" data-formfield="contactEmail"     placeholder="Enter Email"      name="contactEmail"     value={createContactRecords.Email}></lightning-input><BR />
+
+    </lightning-card>
+    
+</template>

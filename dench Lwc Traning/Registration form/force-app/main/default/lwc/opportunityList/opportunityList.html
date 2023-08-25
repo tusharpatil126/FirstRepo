@@ -1,0 +1,23 @@
+<template>
+    <lightning-card>
+   <!-- <template if:true={contList.data}>
+        <template for:each={contList.data} for:item="con">
+            <li key={con.id}>
+            {con.Name} 
+            {con.Email}
+        </li>
+        </template>
+
+
+    </template> -->
+
+    <template if:true={opolist.data}>
+        <template for:each={opolist.data} for:item="oppo">
+            <li key={oppo.id}>
+                {oppo.Name}
+                {oppo.StageName}
+            </li>
+        </template>
+    </template>
+</lightning-card>
+</template>

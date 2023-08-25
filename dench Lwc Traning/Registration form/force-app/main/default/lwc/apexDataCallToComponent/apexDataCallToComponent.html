@@ -1,0 +1,12 @@
+<template>
+    <lightning-card title="Apex Data Call to Lwc Component">
+        <template if:true={accRecord.data}>
+            <template for:each={accRecord.data} for:item="acc">
+               <p key={acc.id} >{acc.Name}</p>
+            </template>
+        </template>
+        
+
+    </lightning-card>
+    
+</template>

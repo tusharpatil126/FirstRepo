@@ -1,0 +1,17 @@
+<template>
+    <lightning-card>
+        <div>
+            1] Looping Statemanats (Multiple Records)  <br />
+            2]User story a] Display all the Accounts when a Type is selected from the picklist <br/><br/><br/>
+            
+            <lightning-combobox
+            name="accType"
+            label="Selected Account Type"
+            value={accType}
+            placeholder="Selected Account Type"
+            options={accTypes}
+            onchange={handleAccountTypeChange} ></lightning-combobox>
+        </div>
+    
+        </lightning-card>
+</template>

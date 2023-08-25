@@ -1,0 +1,11 @@
+<template>
+    <lightning-card title="Mall Component">
+        
+        <lightning-button variant="brand" label="Show Popup Model" onclick={showPopupHandler}></lightning-button>
+        <template if:true={showPopupModelFlag}>
+    <!--Calling Shop Start-->
+        <c-shop-compo onmyshopevent={closePopupHandler}></c-shop-compo>
+    <!--Calling Shop End-->
+    </template>
+    </lightning-card>
+</template>

@@ -1,0 +1,16 @@
+<aura:component implements="flexipage:availableForAllPageTypes" access="global">
+    <aura:attribute name="myMessage" type="String"/>
+        <lightning:messageChannel 
+        aura:id="msgChannelID"
+        type="AccountDataChannel__c"
+        scope="APPLICATION"
+        />
+
+    <lightning:card title="Aura Component">
+        <lightning:input type="text" name="input1" label="Enter a Message" value="{!v.myMessage}" /><br />
+        <lightning:button variant="brand" label="Send From Aura" title="Brand action" iconName="utility:send" onclick="{!c.sendDataHandler}" />
+
+    </lightning:card>
+</aura:component>	
+
+

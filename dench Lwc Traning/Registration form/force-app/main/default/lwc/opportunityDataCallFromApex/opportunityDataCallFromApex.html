@@ -1,0 +1,11 @@
+<template>
+    <lightning-card title="This is the Opportunity data call in Apex">
+    <template if:true={gatOppRecData.data}>
+        <template for:each={gatOppRecData.data} for:item="opp">
+            <p key={opp.id}>{opp.Name}</p>
+            <p key={opp.id}>{opp.CloseDate}</p>
+            <p key={opp.id}>{opp.StageName}</p>
+        </template>
+    </template>
+</lightning-card>
+</template>

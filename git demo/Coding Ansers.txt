@@ -1,0 +1,89 @@
+Problem 1::
+Consider there are two custom objects "object1__c" and "object2__c" with fields "field1__c" and "field2__c"
+ respectively. There is a master-detail relationship between "object1__c" and "object2__c" 
+(object1__c is parent and object2__c is child).
+Whenever the field "field1__c" of any record of "object1__c" is updated, then automatically update the 
+"field2__c" field of all the "object2__c" records related to the "object1__c" record.
+
+ 
+
+Important Note: This update should happen only if the field1__c is updated on object1__c. If you don't put 
+this condition in the code, then Your answer will NOT be considered.
+
+Ans ::
+
+Trigger ParenttoChild on object1__c(after insert,after update){
+list<object2__c> obj2list = new list<object2__c>();
+set<id> idset = new set<id>();
+for(object1__c obj1:trigger.new){
+idset.add(obj1.id);
+}
+list<object1__c> obj1list = [SELECT id,field1__c,(id,field2__c FROM object2__r) FROM object1__c WHERE id =: idset];
+for(object1__c ob1:obj1list){
+	for(object2__c ob2:ob1.object2__r){
+		ob2.field2__c = ob1.field1__c;
+		obj2list.add(ob2);
+		}
+		if(obj2list.size()>0){
+			update obj2list;
+		}
+
+	}
+}
+
+
+
+
+
+Problem 2::
+
+For each element arr[i] in an integer array, Find whether the sum of all the numbers in the array, 
+except for arr[i] is divisible by arr[i] or not.
+
+ 
+
+Input: Integer array of length n
+
+Output: boolean array of length n
+
+ 
+
+Example:-
+
+Input: 2  4  1  9  10
+
+ 
+
+So, For arr[0], which is 2:
+
+Sum of all numbers except 2 = 4+1+9+10 = 24, which is divisible by 2, so outarr[0] = true.
+
+Similarly, For arr[1], which is 4:
+
+Sum of all numbers except 4 = 2+1+9+10 = 22, which is not divisible by 4, so outarr[1] = false.
+
+ 
+
+Overall, the output for this example will be:
+
+True, false, true, false, false
+
+
+Ans::
+
+#include <stdio.h>
+
+int main() {
+  int arr[i] = {2 , 4 , 1 , 9  ,10};
+  int sum = 0; 
+  int length;
+  if(length = arr[i]/(arr[0])){ 
+   for (int i = 0; i < length; i++) {     
+       sum = sum + arr[i];    
+    }   
+printf("true"); 
+} 
+ 
+  return 0;
+}
+

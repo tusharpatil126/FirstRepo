@@ -1,0 +1,67 @@
+first open objcet
+go to page layout
+by defalut one page layout available each object
+by using pagelayout we want to arrange the fields and add some sections.
+open object existing layout.
+
+if i click fields so right side all fields avaiable
+add fields are disable because they alreacy present in pagelayout.
+
+just drag and drop the fields.
+
+create the section just drag and drop 
+section name is author information.
+move the fields field information to author section.
+
+create one more section Price Information
+need to simply drag and drop the fields.
+
+click on quick save
+
+if you want to set perticular field required or read only you set through the property.
+
+
+Going to relted list
+
+
+
+
+Creating the Record types
+search obj going to create record type
+go to record type and click new 
+record type label is Technical
+click next
+click save
+go add category picklist and diselecting the non technical value
+select the default value
+click save 
+
+create one more record type is non technical
+click next
+click save 
+edit category picklist
+remove the technical values
+click save 
+
+go to pagelayout book layout already created
+create one more pagelayout
+click new we need to create seprate layout
+existing layout select book
+page layout name is Technical layout
+click save 
+remove the author section
+click save 
+
+create one more pagelayout for non technical
+existing layout select book
+page layout name is nontechnical layout
+click save 
+click save 
+
+click pagelayout Assignment
+click edit 
+choose non technical layout 
+pagelayout to use Non technical book layout
+same techinal process
+click save 
+
